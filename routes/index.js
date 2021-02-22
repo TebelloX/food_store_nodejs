@@ -7,6 +7,7 @@ router.get("/", (req, res) => {
   // res.send("Hey! It works!");
   // res.json(wes);
   res.send(req.query.name);
+  res.json(query);
 });
 
 module.exports = router;
