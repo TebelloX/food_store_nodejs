@@ -7,11 +7,13 @@ router.get("/", (req, res) => {
   // res.send("Hey! It works!");
   // res.json(wes);
   // res.send(req.query.name);
-  res.json(req.query);
+  // res.json(req.query);
+  res.render("hello");
 });
 
 router.get("/reverse/:name", (req, res) => {
-  res.send(req.params.name);
+  const reverse = [...req.params.name].reverse().join("");
+  res.send(reverse);
 });
 
 module.exports = router;
