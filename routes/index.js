@@ -8,7 +8,10 @@ router.get("/", (req, res) => {
   // res.json(wes);
   // res.send(req.query.name);
   // res.json(req.query);
-  res.render("hello");
+  res.render("hello", {
+    name: "wes",
+    dog: "snickers",
+  });
 });
 
 router.get("/reverse/:name", (req, res) => {
